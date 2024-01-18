@@ -1,0 +1,32 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc -p ./tsconfig.json"
+  },
+  "author": "",
+  "dependencies": {
+    "aws-lambda": "^1.0.0",
+    "esbuild": "0.17.16",
+    "typescript-optional": "^3.0.0-alpha.3",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "@types/uuid": "^9.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint": "^8.36.0",
+    "typescript": "^4.9.5"
+  },
+  "workspaces": [
+    "deployments",
+    "deployments/aws-lambda",
+    "deployments/azure-functions",
+    "deployments/gcp-cloud-function",
+    "core"
+  ]
+}

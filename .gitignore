@@ -1,0 +1,18 @@
+**/.idea
+java/**/target
+**/.DS_Store
+**/node_modules
+**/dist
+/typescript/build
+typescript/deployments/aws-lambda/dist/
+**/*.js
+
+# Azure local testing files
+**/__azurite*
+**/__blobstorage*
+
+# Python build directories
+**/python/**/*-build
+
+/dotnet/**/bin/
+/dotnet/**/obj/

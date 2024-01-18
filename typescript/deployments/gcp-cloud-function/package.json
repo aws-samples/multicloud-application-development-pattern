@@ -1,0 +1,21 @@
+{
+  "name": "gcp-cloud-function",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./dist && esbuild src/index.ts --bundle --platform=node --outfile=./dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/firestore": "^6.5.0",
+    "@google-cloud/functions-framework": "^3.2.0",
+    "@types/uuid": "^9.0.1",
+    "core": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.113"
+  }
+}

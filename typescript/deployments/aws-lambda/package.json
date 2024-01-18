@@ -1,0 +1,21 @@
+{
+  "name": "aws-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./dist && esbuild src/index.ts --bundle --platform=node --outfile=./dist/index.js && cd dist && zip index.zip index.js && cd .."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.289.0",
+    "@aws-sdk/lib-dynamodb": "^3.289.0",
+    "@types/uuid": "^9.0.1",
+    "core": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.113"
+  }
+}

@@ -1,0 +1,3 @@
+{
+    "azureFunctions.projectSubpath": "deployments/azure-function/bin/output"
+}
