@@ -1,0 +1,10 @@
+.vscode
+dist
+build
+*.egg-info
+__pycache__
+aws-build
+**/aws-lambda.zip
+**/.venv
+*.whl
+*dist-info*

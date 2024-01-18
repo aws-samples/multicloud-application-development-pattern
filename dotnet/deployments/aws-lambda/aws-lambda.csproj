@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\core\core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Amazon.Lambda.APIGatewayEvents" Version="2.6.0" />
+      <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.103.11" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="bin\Debug\" />
+      <Folder Include="obj\Debug\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Amazon.Lambda.Core" Version="2.1.0 " />
+        <PackageReference Include="Amazon.Lambda.Serialization.SystemTextJson" Version="2.2.0" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>aws_lambda</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Exe</OutputType>
+        <!-- Generate ready to run images during publishing to improve cold start time. -->
+        <PublishReadyToRun>true</PublishReadyToRun>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+
+</Project>
