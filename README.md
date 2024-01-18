@@ -245,21 +245,12 @@ To deploy the AWS Lambda, do the following:
    Save and execute the test.  The response body should contain the object you persisted in the prior step. 
 
 ##### GCP Cloud Functions
-To test the GCP Cloud Function locally, do the following:
+To deploy and test the GCP Cloud Function, do the following:
 
-1. Create a Python virtual environment under the `/gcp` directory by running `python3 -m venv .venv`.
-2. Activate the virtual environment by running `source .venv/bin/activate`.
-3. Run `cd ..`.
-4. Install GCP Cloud Function dependencies by running `pip install -r ./gcp/requirements.txt`.
-5. Run the GCP Cloud Function locally by running `cd gcp/` and `functions-framework-python --target hello_http --debug`.  The framework will live reload any changes you make to the Python code in the `/gcp` directory.
-6. Open a new terminal and run `curl -X POST http://localhost:8080/person --data '{"firstName": "Bob", "lastName": "Ross", "dateOfBirth": "1970-01-01"}' --header "Content-Type: application/json"` to create a person object.  You should get a 201 response with an id in the response body.
-7. Run `curl http://localhost:8080/person?id=abc123` to retrieve the same person object.  You should see the person in the response body.
-
-To deploy the GCP Cloud Function, do the following:
-
+1. Create a GCP Cloud Function in the GCP Console named `personApiPython`.
 1. Build the deployment artifact by doing the following:  1) Run `pip install wheel setuptools` and 2) running `./gcp/build.sh` from the `/python` directory.
 2. Upload the `/gcp-build` directory using GCP CloudShell.
-3. From GCP CloudShell, run the following (replace the placeholder with your project id):
+3. From GCP CloudShell, run the following (replace the placeholders with your function name and project id).  Modify any options as needed, such as region or runtime:
 ```shell
 gcloud functions deploy personApiPython --gen2 --runtime=python311 --region=us-east1 --source=./gcp-build --entry-point=hello_http --trigger-http --allow-unauthenticated --set-env-vars PROJECT_ID={your project id here}
 ```
@@ -272,6 +263,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"firstName": "Bob", "lastN
 ```shell
 curl {paste the URL here}/personApiPython/person?id={paste the id here}
 ```
+The response should contain the person object you persisted in the previous step.
 
 ## Security
                                                                                 
