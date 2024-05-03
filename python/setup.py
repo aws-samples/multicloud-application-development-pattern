@@ -1,6 +1,6 @@
 from setuptools import setup
 
-VERSION = '0.2'
+VERSION = '0.3'
 DESCRIPTION = 'Multi cloud architecture core code'
 
 setup(

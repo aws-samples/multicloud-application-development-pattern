@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\core\core.csproj" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>gcp_cloud_function</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Google.Cloud.Firestore" Version="3.3.0" />
+        <PackageReference Include="Google.Cloud.Functions.Hosting" Version="2.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="obj\Debug\" />
+    </ItemGroup>
+
+</Project>

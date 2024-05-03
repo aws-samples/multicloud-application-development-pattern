@@ -12,6 +12,7 @@
     <modules>
         <module>aws-lambda</module>
         <module>gcp-cloud-function</module>
+        <module>azure-function</module>
     </modules>
 
     <artifactId>deployments</artifactId>

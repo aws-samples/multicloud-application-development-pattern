@@ -3,6 +3,6 @@
 
 # This relative path assumes you are running `pip install -r requirements.txt` from the `/python` directory with `build.sh`.
 # If you run `pip install` from `/gcp` then the relative path should be `../mcacore-0.3-py3-none-any.whl` instead.
-./mcacore-0.2-py2.py3-none-any.whl
+./mcacore-0.3-py2.py3-none-any.whl
 google-cloud-firestore
 functions-framework==3.*
