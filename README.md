@@ -1,10 +1,10 @@
-## Multi-Cloud Application Development Design Patterns
+## Multicloud Application Development Design Patterns
 
 ### Summary
 This repo contains a sample multicloud application development pattern written in Java, C#, TypeScript, and Python.  All languages have been tested using AWS, Azure, and GCP serverless Function-as-a-Service and NoSQL database offerings - specifically AWS Lambda with DynamoDB, Azure Functions with CosmosDB, and GCP Cloud Functions with Firestore.
 
 This pattern makes it possible to run the same application business logic on multiple cloud providers using each provider's 
-proprietary services. For example, instead of "lowest common denominator" technologies such as Kubernetes and Kafka, an 
+proprietary services. For example, instead of open source container orchestration technologies or NoSQL databases, an 
 application could be built to use AWS Lambda with DynamoDB on AWS, GCP Cloud Functions with Firestore on GCP, and Azure 
 Functions with CosmosDB on Azure. This makes applications portable between cloud providers, which can save time and money 
 for organizations that want to be able to deploy their applications to multiple clouds.
@@ -23,8 +23,7 @@ The following architectural diagram describes how the pattern accomplishes this.
 build process outputs.  The blue box is the "core" business logic, which is cloud-agnostic - it should not have any cloud 
 SDKs as dependencies.  The thin yellow boxes are the thin cloud-specific "wrappers" that implement minimal - and often times 
 boilerplate - cloud-specific logic.  This pattern allows us to swap cloud-specific wrappers around the business logic, so 
-that the application business logic can run on different cloud providers and take advantage of proprietary cloud services rather
-than "lowest common denominator" services.
+that the application business logic can run on different cloud providers and take advantage of cloud native services.
 
 ![architecture](./readme_images/multicloud_architecture.png)
 
@@ -57,7 +56,7 @@ Repo Roadmap:
 
 ## Java
 
-To build the Java multi-cloud design pattern, do the following:
+To build the Java multicloud design pattern, do the following:
 
 1. From the `java` directory, run `mvn clean install`.  This builds every modules' artifacts, including one for GCP, AWS, Azure under the `/deployments` directory.
 
